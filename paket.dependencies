@@ -1,0 +1,36 @@
+source https://www.nuget.org/api/v2
+source https://api.nuget.org/v3/index.json
+
+version 5.216.0
+framework: netcoreapp2.2, netstandard2.0
+storage: none
+
+nuget FSharp.Core
+
+// Client
+nuget Fable.Core ~> 3
+nuget Fable.Elmish ~> 3
+nuget Fable.Elmish.Debugger ~> 3
+nuget Fable.Elmish.HMR ~> 4
+nuget Fable.Elmish.React ~> 3
+nuget Thoth.Fetch ~> 1
+nuget Fable.React ~> 5
+nuget Fable.Remoting.Client ~> 5
+//nuget Elmish.Bridge.Client ~> 3
+
+// Server
+nuget Saturn
+nuget Fable.Remoting.Giraffe ~> 3
+//nuget Elmish.Bridge.Giraffe ~> 3
+nuget Thoth.Json.Giraffe
+
+group Build
+    source https://api.nuget.org/v3/index.json
+    framework: netstandard2.0
+    storage: none
+
+    nuget FSharp.Core
+    nuget Fake.Core.ReleaseNotes
+    nuget Fake.Core.Target
+    nuget Fake.DotNet.Cli
+    nuget Fake.IO.FileSystem
